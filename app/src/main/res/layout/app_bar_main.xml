@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.EcureDoctor.AppBarOverlay">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.EcureDoctor.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:id="@+id/bottomDraw"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/profileDashBoard"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/profile_icon"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/circle_image" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/chatToDoctorDashBoard"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/chat_icon"
+                android:background="@drawable/circle_image" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/settingDashBoard"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/setting"
+                android:background="@drawable/circle_image" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/whatsappDashBoard"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="185dp"
+                android:background="@drawable/circle_image"
+                android:src="@drawable/whatsapp_icon"
+                android:scaleType="fitCenter"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

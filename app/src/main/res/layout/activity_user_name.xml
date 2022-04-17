@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context=".userLoginInfo.UserNameActivity">
+
+
+    <ImageView
+        android:id="@+id/logoIMG"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:maxWidth="300dp"
+        android:maxHeight="300dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/logotype" />
+
+    <ImageView
+        android:id="@+id/ecureIMG"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoIMG"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ecure_doctor" />
+
+
+    <LinearLayout
+        android:id="@+id/nameLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/websiteTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/userTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/enter_your_user_name"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/userNameEDT"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints=""
+            android:background="@drawable/background_name"
+            android:hint="@string/user_name"
+            android:inputType="textPersonName"
+            android:maxHeight="60dp"
+            android:maxLength="10"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/submitBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_bg"
+            android:maxHeight="40dp"
+            android:text="@string/submit"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/passwrodLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_above="@+id/websiteTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/passTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/enter_your_password"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/background_name"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/password"
+                android:padding="1dp"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/passwordEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPassword"
+                    android:maxHeight="60dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/submitPassBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_bg"
+            android:maxHeight="40dp"
+            android:text="@string/submit"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/forgetTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="35dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/forget_password"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recoveryLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/websiteTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:visibility="gone"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/userRecTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/password_recovery"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/userNameRecEDT"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints=""
+            android:background="@drawable/background_name"
+            android:hint="@string/user_name"
+            android:inputType="textPersonName"
+            android:maxHeight="60dp"
+            android:maxLength="10"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/recBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_bg"
+            android:maxHeight="40dp"
+            android:text="@string/submit"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/passwrodOTPLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/websiteTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/passOTPTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Enter the OTP and proceed to change the password"
+            android:textSize="16sp"
+            android:textAlignment="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/background_name"
+            android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/passwordOTPEDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPassword"
+                    android:maxHeight="60dp"
+                    android:padding="10dp"
+                    android:hint="@string/otp"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/submitPassOTPBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_bg"
+            android:maxHeight="40dp"
+            android:text="@string/submit"
+            android:textAllCaps="false" />
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/websiteTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/website"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

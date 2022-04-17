@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+
+            android:title="DashBoard" />
+        <item
+            android:id="@+id/nav_appointment"
+            android:title="@string/appointment" />
+        <item
+            android:id="@+id/nav_patient"
+            android:title="@string/my_patient" />
+         <item
+            android:id="@+id/profile"
+            android:title="@string/my_profile" />
+        <item
+            android:id="@+id/finance"
+            android:title="@string/my_finance" />
+        <item
+            android:id="@+id/settings"
+            android:title="@string/my_settings" />
+        <item
+            android:id="@+id/suggestions"
+            android:title="@string/suggestions" />
+
+        <item
+            android:id="@+id/scheduleTime"
+            android:title="@string/my_schedule_timing" />
+
+
+    </group>
+</menu>

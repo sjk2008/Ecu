@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">EcureDoctor</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="app_for_doctors">App for Doctors</string>
+    <string name="enter_your_user_name">Enter your User Name</string>
+    <string name="website">Website: https:ecure.com</string>
+    <string name="user_name">User Name</string>
+    <string name="submit">Submit</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="forget_password">Forget Password!</string>
+    <string name="password_recovery">Enter your User Name for Password Recovery</string>
+    <string name="otp">OTP</string>
+    <string name="my_schedule_timing">My Schedule Timing</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="my_settings">My Settings</string>
+    <string name="my_finance">My Finance</string>
+    <string name="my_profile">My Profile</string>
+    <string name="my_patient">My Patient</string>
+    <string name="appointment">Appointment</string>
+</resources>
