@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +34,12 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.MyViewHold
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
     String name = detailsList.get(position).getDetailsName();
     holder.tv.setText(name);
+    holder.itemView.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(view.getContext(), "name:- "+name, Toast.LENGTH_SHORT).show();
+        }
+    });
     }
 
     @Override

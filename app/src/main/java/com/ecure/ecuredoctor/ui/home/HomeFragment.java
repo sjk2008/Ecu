@@ -1,5 +1,6 @@
 package com.ecure.ecuredoctor.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,8 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         usersList = new ArrayList<>();
+
+
         setUserInfo();
         setAdapter();
         return root;

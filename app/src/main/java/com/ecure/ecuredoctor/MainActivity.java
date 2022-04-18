@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.ecure.ecuredoctor.ui.gallery.GalleryFragment;
 import com.ecure.ecuredoctor.ui.home.HomeFragment;
+import com.ecure.ecuredoctor.ui.slideshow.SlideshowFragment;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -91,8 +92,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+
+
                 int position = tab.getPosition();
 //                Toast.makeText(MainActivity.this, "position : "+position, Toast.LENGTH_SHORT).show();
+
                   if (position ==0 ){
                       Toast.makeText(MainActivity.this, "1", Toast.LENGTH_SHORT).show();
                   }else if (position ==1){

@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,6 +40,14 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
     holder.mobile.setText(patient.getMobile());
     holder.pid.setText(patient.getPid());
     holder.net.setText(patient.getNet());
+
+    holder.itemView.setOnClickListener(new View.OnClickListener() {
+        String name = patient.getName();
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(view.getContext(), "selected:- "+name, Toast.LENGTH_SHORT).show();
+        }
+    });
     }
 
     @Override

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.ecure.ecuredoctor.MainActivity;
@@ -25,6 +26,10 @@ public class UserNameActivity extends AppCompatActivity {
         binding.userNameEDT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String name = binding.userNameEDT.getText().toString();
+                Intent intent =  new Intent(UserNameActivity.this,UserNameActivity.this.getClass());
+                intent.putExtra("name",name);
+                startActivity(intent);
             }
         });
 
@@ -33,13 +38,13 @@ public class UserNameActivity extends AppCompatActivity {
             public void onClick(View view) {
                 binding.nameLL.setVisibility(View.GONE);
                 binding.passwrodLL.setVisibility(View.VISIBLE);
-
             }
         });
 
         binding.submitPassBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                EditText password = binding.passwordEDT;
                 Intent intent = new Intent(UserNameActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
@@ -52,6 +57,7 @@ public class UserNameActivity extends AppCompatActivity {
                 binding.nameLL.setVisibility(View.GONE);
                 binding.passwrodLL.setVisibility(View.GONE);
                 binding.recoveryLL.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -62,6 +68,7 @@ public class UserNameActivity extends AppCompatActivity {
                 binding.passwrodLL.setVisibility(View.GONE);
                 binding.recoveryLL.setVisibility(View.GONE);
                 binding.passwrodOTPLL.setVisibility(View.VISIBLE);
+
 
             }
         });
